@@ -66,9 +66,9 @@ body {
 }
 .xupload .xupload__display-image {
   position: absolute;
-  right: 0;
-  top: -0.7rem;
-  width: 2rem;
+  right: 0rem;
+  top: -0.75rem;
+  width: 3rem;
   height: 2.1rem;
   z-index: -1;
 }
@@ -107,11 +107,11 @@ body {
   color: #ffffff;
 }
 .xactive-tip {
-  height: 1.8rem;
+  height: 2.3rem;
   padding: 0 0.3rem;
   display: flex;
   background: url('../img/book.png') 5rem bottom no-repeat;
-  background-size: 1.84rem 1.14rem;
+  background-size: 1.85rem 1.59rem;
 }
 .xactive-tip .xactive-tip__icon {
   margin-right: 0.16rem;
