@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>微信活动页</title>
+</head>
+<link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="./css/wx.css" />
+<body>
+  <div class="xheader">
+    <div class="xheader__left">
+      <img src="./img/arrow_left.png" alt="">
+      <span>返回</span>
+    </div>
+    <div class="xheader__center">
+      <span>免费查重字数如何领取？</span>
+    </div>
+    <div class="xheader__right">
+      <img src="./img/more.png" alt="">
+    </div>
+  </div>
+  <div class="xreceive-tip">
+    <div class="xreceive-tip__title">
+      <span class="xtitle">超棒的检测工具！</span>
+      <span class="xby">大雅相似度</span>
+    </div>
+    <div class="xstep-info">
+      <div class="xstep-info__title">免费的查重字数如何领取？</div>
+      <div class="xstep-info__text" style="color: #606266;">以下两种方式均可：</div>
+      <div class="xstep-info__text">1.转发此链接至朋友圈/QQ空间</div>
+      <div class="xstep-info__text">
+        2.下载下方图片，发布至第三方平台<br>
+        <span style="color: #606266;">（抖音、快手、小红书、知乎、微博...）</span>
+      </div>
+      <div class="xstep-info__text">集赞上传截图，24h审核通过后会自动将代金券发放至学习通账户。</div>
+    </div>
+  </div>
+  <footer class="xfooter">
+    <img class="xfooter__display-image" src="./img/wx_bg_3.png" alt="">
+    <div class="xbutton">
+      <span>保存图片</span>
+    </div>
+  </footer>
+  
+  <script>
+    const deviceWidth = document.documentElement.clientWidth;
+    const rem = (deviceWidth * 100) / 750;
+    document.querySelector('html').style.fontSize =  rem + 'px';
+  </script>
+</body>
+</html>

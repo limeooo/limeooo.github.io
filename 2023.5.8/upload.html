@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上传页</title>
+</head>
+<link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="./css/upload.css" />
+<body>
+  <div class="xheader">
+    <div class="xheader__left">
+      <img src="./img/arrow_left.png" alt="">
+    </div>
+    <div class="xheader__center">
+      <span>大雅相似度</span>
+    </div>
+    <div class="xheader__right">&nbsp;</div>
+  </div>
+  <div class="xqr-code">
+    <div class="xqr-code__background">
+      <div class="xqr-code__image">
+        <img src="./img/qr_code.png" alt="">
+      </div>
+    </div>
+    <span class="xqr-code__tip">扫一扫，领取免费查重字数</span>
+  </div>
+  <div class="xupload">
+    <img class="xupload__display-image" src="./img/pencil_2.png" alt="">
+    <div class="xupload__wrapper">
+      <div class="xupload__title">上传截图，提交审核</div>
+      <div class="xupload__content">点击上传截图</div>
+      <!-- <img class="xupload__content" src="./img/upload_success.png" alt=""> -->
+    </div>
+  </div>
+  <div class="xconfirm-button">提交审核</div>
+  <div class="xactive-tip">
+    <img class="xactive-tip__icon" src="./img/tip.png" alt=""></img>
+    <span class="xactive-tip__text">提交后不可修改，请谨慎填写（若发现任何形式的作弊行为，将取消活动资格）</span>
+  </div>
+  <img class="xfooter-display-image" src="./img/book.png" alt="">
+  
+  <script>
+    const deviceWidth = document.documentElement.clientWidth;
+    const rem = (deviceWidth * 100) / 750;
+    document.querySelector('html').style.fontSize =  rem + 'px';
+  </script>
+</body>
+</html>

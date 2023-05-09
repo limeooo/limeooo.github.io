@@ -1,0 +1,135 @@
+body {
+  background: url("../img/background.png") repeat;
+  background-size: 100%;
+}
+
+.xheader {
+  height: .88rem;
+  padding: 0 .4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0 .04rem .04rem rgba(0, 0, 0, 0.05);
+
+  .xheader__left,
+  .xheader__center,
+  .xheader__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .xheader__left,
+  .xheader__right {
+    width: 1rem;
+
+    img {
+      height: .44rem;
+      width: .44rem;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: .26rem;
+      color: #0066cc;
+    }
+  }
+
+  .xheader__center {
+    span {
+      font-size: .32rem;
+      color: #303133;
+      font-weight: 500;
+    }
+  }
+}
+
+.xreceive-tip {
+  margin: .4rem 0 .25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .xreceive-tip__title {
+    position: relative;
+    width: 5.09rem;
+    height: 1.29rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/wx_bg_1.png") no-repeat;
+    background-size: 100%;
+
+    .xtitle {
+      font-weight: 500;
+      font-size: .36rem;
+      color: #303133;
+    }
+
+    .xby {
+      position: absolute;
+      top: -0.04rem;
+      right: .22rem;
+      font-size: .3rem;
+      transform: scale(0.6);
+      color: #ffffff;
+      font-weight: 400;
+      letter-spacing: .06rem;
+    }
+  }
+}
+
+.xstep-info {
+  z-index: 99;
+  width: 100%;
+  height: 6rem;
+  background: url("../img/wx_bg_2.png") no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  padding: .8rem 1rem;
+  margin-top: -0.1rem;
+
+  .xstep-info__title,
+  .xstep-info__text {
+    font-weight: 400;
+    color: #303133;
+    margin-top: .24rem;
+  }
+
+  .xstep-info__title {
+    font-size: .36rem;
+  }
+
+  .xstep-info__text {
+    font-size: .32rem;
+  }
+}
+
+.xfooter {
+  padding: .4rem .3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .xfooter__display-image {
+    width: 100%;
+  }
+
+  .xbutton {
+    margin-top: .24rem;
+    width: 4.68rem;
+    height: 1.2rem;
+    background: url("../img/button.png") 0 50% no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-weight: 500;
+      font-size: .32rem;
+      color: #ffffff;
+      transform: translateY(-0.1rem);
+    }
+  }
+}

@@ -1,0 +1,129 @@
+body {
+  background: url("../img/background.png") repeat;
+  background-size: 100%;
+}
+.xheader {
+  height: 0.88rem;
+  padding: 0 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0 0.04rem 0.04rem rgba(0, 0, 0, 0.05);
+}
+.xheader .xheader__left,
+.xheader .xheader__center,
+.xheader .xheader__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.xheader .xheader__left,
+.xheader .xheader__right {
+  width: 1rem;
+}
+.xheader .xheader__left img,
+.xheader .xheader__right img {
+  height: 0.44rem;
+  width: 0.44rem;
+}
+.xheader .xheader__center span {
+  font-size: 0.32rem;
+  color: #303133;
+  font-weight: 500;
+}
+.xqr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../img/pencil.png") 0 2rem no-repeat;
+  background-size: 1rem;
+}
+.xqr-code .xqr-code__background {
+  padding: 0 1rem;
+  background: url("../img/star.png") 0.2rem 1.72rem no-repeat, url("../img/star.png") 3.9rem 0.66rem no-repeat, url("../img/star.png") 4.3rem 0.94rem no-repeat, url("../img/download.png") 4.3rem 3.4rem no-repeat;
+  background-size: 0.4rem, 0.4rem, 0.5rem, 0.36rem;
+}
+.xqr-code .xqr-code__image {
+  margin-top: 1rem;
+  width: fit-content;
+  background-color: #ffffff;
+  border: 0.02rem solid #b7bcc5;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.2rem 0;
+}
+.xqr-code .xqr-code__image img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.xqr-code .xqr-code__tip {
+  margin-top: 0.2rem;
+  font-weight: 400;
+  font-size: 0.28rem;
+  color: #303133;
+}
+.xupload {
+  position: relative;
+}
+.xupload .xupload__display-image {
+  position: absolute;
+  right: 0;
+  top: -0.7rem;
+  width: 2rem;
+  height: 2.1rem;
+  z-index: -1;
+}
+.xupload .xupload__wrapper {
+  padding: 0 0.3rem;
+}
+.xupload .xupload__wrapper .xupload__title {
+  padding: 0.4rem 0 0.2rem;
+  font-weight: 500;
+  font-size: 0.32rem;
+  color: #303133;
+}
+.xupload .xupload__wrapper .xupload__content {
+  border: 0.02rem dashed #909399;
+  border-radius: 0.1rem;
+  background: #f8fdff;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  color: #0066cc;
+  font-size: 0.28rem;
+}
+.xconfirm-button {
+  margin: 0.4rem 0.3rem;
+  height: 0.8rem;
+  background-color: #088ef9;
+  border-radius: 0.08rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 0.28rem;
+  color: #ffffff;
+}
+.xactive-tip {
+  padding: 0 0.3rem;
+  display: flex;
+}
+.xactive-tip .xactive-tip__icon {
+  margin-right: 0.16rem;
+  width: 0.34rem;
+  height: 0.34rem;
+}
+.xactive-tip .xactive-tip__text {
+  font-weight: 400;
+  font-size: 0.26rem;
+  color: #606266;
+}
+.xfooter-display-image {
+  position: fixed;
+  bottom: 0;
+  right: 0.7rem;
+  width: 1.84rem;
+  height: 1.38rem;
+}
