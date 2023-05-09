@@ -107,8 +107,11 @@ body {
   color: #ffffff;
 }
 .xactive-tip {
+  height: 1.8rem;
   padding: 0 0.3rem;
   display: flex;
+  background: url('../img/book.png') 5rem bottom no-repeat;
+  background-size: 1.84rem 1.14rem;
 }
 .xactive-tip .xactive-tip__icon {
   margin-right: 0.16rem;
@@ -119,11 +122,4 @@ body {
   font-weight: 400;
   font-size: 0.26rem;
   color: #606266;
-}
-.xfooter-display-image {
-  position: fixed;
-  bottom: 0;
-  right: 0.7rem;
-  width: 1.84rem;
-  height: 1.38rem;
 }
