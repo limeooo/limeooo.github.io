@@ -14,9 +14,30 @@
       <img src="./img/upload.png" alt="">
       <span>活动上传入口</span>
     </div>
-    <div class="xbutton-box__item">
+    <div class="xbutton-box__item" onclick="openCouponPackage()">
       <img src="./img/coupon.png" alt="">
       <span>我的券包</span>
+    </div>
+  </div>
+
+  <div class="xdialog">
+    <div class="xdialog__mask" />
+    <div class="xdialog__content">
+      <div class="xbutton" onclick="closeCouponDialog()">
+        <img src="./img/close.png" alt="">
+      </div>
+      <div class="xticket-info">
+        <span class="xticket-info__title">代金券：</span>
+        <span class="xticket-info__quantity">7</span>
+        <span class="xticket-info__unit">张</span>
+        <span class="xticket-info__tip">免费领取</span>
+      </div>
+      <div class="xticket-info">
+        <span class="xticket-info__title">折扣券：</span>
+        <span class="xticket-info__quantity">13</span>
+        <span class="xticket-info__unit">张</span>
+        <span class="xticket-info__tip">免费领取</span>
+      </div>
     </div>
   </div>
   
@@ -24,6 +45,14 @@
     const deviceWidth = document.documentElement.clientWidth;
     const rem = (deviceWidth * 100) / 750;
     document.querySelector('html').style.fontSize =  rem + 'px';
+  
+    const couponDialogEl = document.querySelector('.xdialog');
+    function openCouponPackage() {
+      couponDialogEl.style.display = 'block';
+    }
+    function closeCouponDialog() {
+      couponDialogEl.style.display = 'none';
+    }
   </script>
 </body>
 </html>

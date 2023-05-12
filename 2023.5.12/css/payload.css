@@ -198,6 +198,7 @@ body {
   left: 0;
   right: 0;
   bottom: -100%;
+  max-height: 9.86rem;
   padding: 0 0.4rem;
   background-color: #FFFFFF;
   border-radius: 0.16rem 0.16rem 0 0;
@@ -231,7 +232,14 @@ body {
 }
 .xdialog-coupon .xconfirm-button {
   position: static !important;
-  margin-bottom: 0.4rem;
+  margin: 0.4rem 0;
+}
+.xdialog-coupon .xdialog-coupon__box {
+  max-height: 7.01rem;
+  overflow-y: auto;
+}
+.xdialog-coupon .xdialog-coupon__box::-webkit-scrollbar {
+  display: none;
 }
 .xdialog-coupon__box__item {
   width: 6.7rem;
