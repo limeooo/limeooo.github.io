@@ -1,0 +1,358 @@
+body {
+  background-color: #F5F5F5;
+}
+
+.xwrapper {
+  padding: 0 .3rem;
+}
+
+.xheader {
+  height: 0.88rem;
+  padding: 0 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0 0.04rem 0.04rem rgba(0, 0, 0, 0.05);
+
+  .xheader__left,
+  .xheader__center,
+  .xheader__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .xheader__left,
+  .xheader__right {
+    width: 1rem;
+
+    img {
+      height: 0.44rem;
+      width: 0.44rem;
+    }
+  }
+
+  .xheader__center {
+    span {
+      font-size: 0.32rem;
+      color: #303133;
+      font-weight: 500;
+    }
+  }
+}
+
+.xtitle {
+  height: .6rem;
+  line-height: .6rem;
+  font-size: .32rem;
+  color: #303133;
+  font-weight: 500;
+  margin-bottom: .2rem;
+}
+
+.xtotal-price {
+  height: 1.68rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #303133;
+
+  .xtotal-price__box {
+    font-size: .1rem;
+  }
+
+  .xtotal-price__box--unit {
+    font-size: .32rem;
+  }
+
+  .xtotal-price__box--price {
+    font-size: .64rem;
+  }
+}
+
+.xdiscounts__coupon {
+  height: 1.2rem;
+  background-color: #FFFFFF;
+  border-radius: .08rem;
+  box-sizing: border-box;
+  padding: .3rem .45rem .3rem .3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xdiscounts__coupon__title {
+  font-size: .28rem;
+  color: #303133;
+}
+
+.xdiscounts__coupon__info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .red {
+    color: #ff0000;
+  }
+
+  .orange {
+    color: #F38816;
+  }
+
+  .text {
+    font-size: .24rem;
+    color: #909399;
+  }
+
+  .decrease {
+    font-size: .28rem;
+    color: #303133;
+  }
+
+  .small {
+    font-size: .25rem;
+    transform: scale(.8);
+  }
+
+  img {
+    margin-left: .31rem;
+    width: .14rem;
+    height: .25rem;
+  }
+}
+
+.xpay-method {
+  margin-top: .4rem;
+
+  .xpay-method__box {
+    border-radius: .08rem;
+    background-color: #FFFFFF;
+  }
+
+  .xpay-method__box__item {
+    position: relative;
+    padding: 0 .3rem;
+
+
+    &:first-child label {
+      border-bottom: .01rem solid #D9D9D9;
+    }
+
+    input {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      left: .3rem;
+      top: .3rem;
+      width: .6rem;
+      height: .6rem;
+    }
+    
+    label {
+      position: relative;
+      display: block;
+      padding: .3rem .5rem .3rem .9rem;
+      font-size: .32rem;
+      line-height: .6rem;
+      color: #303133;
+      z-index: 9;
+    }
+
+    .check {
+      position: absolute;
+      right: .3rem;
+      top: .35rem;
+      border-radius: 50%;
+      width: .48rem;
+      height: .48rem;
+      border: .02rem solid #D9DBE0;
+    }
+
+    input[type=radio]:checked ~ .check {
+      background: url('../img/checked.png') no-repeat;
+      background-size: .48rem .48rem;
+    }
+  }
+}
+
+.xconfirm-button {
+  position: fixed;
+  left: .3rem;
+  right: .3rem;
+  bottom: .3rem;
+  height: .8rem;
+  background-color: #088EF9;
+  border-radius: .08rem;
+  font-size: .28rem;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xdialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+  display: none;
+}
+
+.xdialog {
+  z-index: 99;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.48rem;
+  height: 1.2rem;
+  padding: .5rem .81rem;
+  background-color: rgba(255, 255, 255);
+  border-radius: .08rem;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .xdialog__text {
+    font-size: .32rem;
+    color: #303133;
+  }
+}
+
+.xdialog-coupon {
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  // height: 9.86rem;
+  padding: 0 .4rem;
+  background-color: #FFFFFF;
+  border-radius: .16rem .16rem 0 0;
+  transition: .5s linear;
+
+  .xdialog-coupon__header {
+    position: absolute;
+    top: .1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: .9rem;
+    height: .1rem;
+    border-radius: .05rem;
+    background-color: #D9D9D9;
+  }
+
+  .xdialog-coupon__title {
+    height: .45rem;
+    margin: .4rem 0 .4rem;
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-size: .32rem;
+      color: #303133;
+      font-weight: 500;
+    }
+
+    .desc {
+      font-size: .24rem;
+      color: #909399;
+      margin-left: .2rem;
+    }
+  }
+
+  .xconfirm-button {
+    position: static !important;
+    margin-bottom: .4rem;
+  }
+}
+
+.xdialog-coupon__box__item {
+  width: 6.7rem;
+  height: 2.07rem;
+  margin-bottom: .4rem;
+  background: url('../img/coupon_bg.png') no-repeat;
+  background-size: 6.7rem 2.07rem;
+}
+
+.xdialog-coupon__box__item {
+  display: flex;
+  position: relative;
+
+  .info {
+    // flex: 1;
+    margin: .06rem 0 0 .3rem;
+    display: flex;
+    flex-direction: column;
+
+    .type, .title, .desc {
+      margin-bottom: .1rem;
+    }
+
+    .type, .desc {
+      position: relative;
+      left: -.45rem;
+    }
+
+    .type {
+      font-size: .25rem;
+      transform: scale(0.8);
+      color: #D2394C;
+    }
+
+    .title {
+      height: .6rem;
+      line-height: .6rem;
+      font-size: .32rem;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .desc {
+      height: .28rem;
+      line-height: .28rem;
+      font-size: .25rem;
+      position: relative;
+      transform: scale(0.8);
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .price {
+    padding: .68rem 0;
+    width: 1.1rem;
+    color: #D2394C;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: -0.1rem;
+    
+    .unit {
+      font-size: .24rem;
+      font-weight: 500;
+      line-height: .55rem;
+    }
+
+    .number {
+      font-size: .6rem;
+      font-weight: 600;
+      line-height: .84rem;
+    }
+  }
+
+  input {
+    position: absolute;
+    top: .24rem;
+    right: .24rem;
+    border-color: #BFBFBF;
+  }
+}

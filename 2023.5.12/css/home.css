@@ -1,0 +1,20 @@
+.xbutton-box {
+  padding: 0.2rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #D9DBE0;
+}
+.xbutton-box__item {
+  height: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+.xbutton-box__item img {
+  width: 0.32rem;
+  height: 0.32rem;
+}
+.xbutton-box__item span {
+  margin-left: 0.16rem;
+  color: #1A88FB;
+  font-size: 0.28rem;
+}

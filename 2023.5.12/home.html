@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页</title>
+  <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="./css/home.css" />
+</head>
+<body>
+  <div class="xbutton-box">
+    <div class="xbutton-box__item">
+      <img src="./img/upload.png" alt="">
+      <span>活动上传入口</span>
+    </div>
+    <div class="xbutton-box__item">
+      <img src="./img/coupon.png" alt="">
+      <span>我的券包</span>
+    </div>
+  </div>
+  
+  <script>
+    const deviceWidth = document.documentElement.clientWidth;
+    const rem = (deviceWidth * 100) / 750;
+    document.querySelector('html').style.fontSize =  rem + 'px';
+  </script>
+</body>
+</html>
