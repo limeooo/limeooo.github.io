@@ -17,7 +17,10 @@
   }
 
   MySliderImage.prototype = {
-    // 初始化方法
+    /**
+     * 初始化方法（private）
+     * @param {object} config 配置对象
+     */
     init: function (config) {
       config = config || {}
       // 初始化变量
@@ -26,8 +29,8 @@
       this.width = config.width || '100%' // 宽度，默认值：100%
       this.height = config.height || '300px' // 高度，默认值：300px
       this.data = config.data || [] // 数据数组，可以是图片url地址或html文本，默认值：[]
-      this.scaleArr = new Array(this.data.length).fill({ scale: 1, originScale: 1 }) // 缩放比例数组
       this.offsetSlider = config.offsetSlider || 100 // 滑动多少距离切换图片，单位：px，默认值：50
+      this.isLoop = config.isLoop // 是否开启循环，默认值：false
       this.isAllowScale = config.isAllowScale // 是否开启两指缩放功能，默认值：false
       this.isShowIndicators = config.isShowIndicators // 是否显示圆点指示器，默认值：false
       this.isShowTransition = config.isShowTransition // 是否展示动画，默认值：false
@@ -49,7 +52,9 @@
       // 返回实例对象
       return this
     },
-    // 初始化滑块
+    /**
+     * 初始化滑块（private）
+     */
     initTrack: function () {
       var trackEl_html = ''
       for (var i = 0; i < this.data.length; i++) {
@@ -66,7 +71,9 @@
       this.trackEl.innerHTML = trackEl_html
       this.el.appendChild(this.trackEl)
     },
-    // 初始化圆点指示器
+    /**
+     * 初始化圆点指示器（private）
+     */
     initIndicators: function () {
       var indicatorsEl_html = ''
       for (var i = 0; i < this.data.length; i++) {
@@ -79,14 +86,20 @@
       this.indicatorsEl.innerHTML = indicatorsEl_html
       this.el.appendChild(this.indicatorsEl)
     },
-    // 销毁事件
+    /**
+     * 销毁事件
+     */
     destroy: function () {
       this.el.removeEventListener('touchstart', this.touchStart)
       this.el.removeEventListener('touchmove', this.touchMove)
       this.el.removeEventListener('touchend', this.touchEnd)
       window.removeEventListener('resize', this.resize)
     },
-    // 重置大小
+    /**
+     * 重置大小
+     * @param {string} width 宽度
+     * @param {string} height 高度
+     */
     resize: function (width, height) {
       this.width = width || this.width
       this.height = height || this.height
@@ -98,18 +111,26 @@
         el.style.width = this.el.clientWidth + 'px'
       }
     },
-    // 重新设置数据
+    /**
+     * 重新设置数据
+     * @param {string[]} data 设置的数据数组
+     */
     setData: function (data) {
-      this.data = data || []
       this.el.innerHTML = ''
       this.currentIndex = 0
+      this.data = data || []
+      this.scaleArr = new Array(this.data.length).fill({ scale: 1, originScale: 1 }) // 缩放比例数组
       this.initTrack()
       if (this.isShowIndicators) this.initIndicators()
-      this.jumpToIndex(this.initialIndex)
+      this.jumpToIndex(this.initialIndex, false)
     },
-    // 滑动开始方法
+    /**
+     * 滑动开始方法（private）
+     */
     touchStart: function (e) {
       if (this.data.length === 0) return
+      //初始化滑动状态
+      this.recoveryTrack()
       // 单指滑动
       this.oneFingerMoving = true
       this.startX = e.touches[0].clientX
@@ -126,19 +147,36 @@
         )
       }
     },
-    // 滑动移动方法
+    /**
+     * 滑动移动方法（private）
+     */
     touchMove: function (e) {
       if (this.data.length === 0) return
-      // 是否展示动画且正在移动时显示滑动动画
-      if (this.isShowTransition && this.oneFingerMoving) {
+      // 单指滑动操作
+      if (e.touches.length === 1 && this.oneFingerMoving && this.data.length > 1) {
         var offsetX = e.touches[0].clientX - this.startX
-        // 为第一张时且向左移动不触发动画
-        if (this.currentIndex === 0 && offsetX > 0) return
-        // 为最后一张时且向右移动不触发动画
-        if (this.currentIndex === this.data.length - 1 && offsetX < 0) return
-        this.trackEl.style.transform = `
-          translateX(${-1 * this.currentIndex * this.el.clientWidth + offsetX}px)
-        `
+        // 为第一张时且向左移动的操作
+        if (this.currentIndex === 0 && offsetX > 0) {
+          if (!this.isLoop) return // 不开启循环则不可滑动
+          var lastImgEl = this.trackEl.children[this.data.length - 1]
+          lastImgEl.style.transform = `
+           translateX(${-1 * this.data.length * this.el.clientWidth}px)
+          `
+        }
+        // 为最后一张时且向右移动的操作
+        if (this.currentIndex === this.data.length - 1 && offsetX < 0) {
+          if (!this.isLoop) return // 不开启循环则不可滑动
+          var firstImgEl = this.trackEl.children[0]
+          firstImgEl.style.transform = `
+           translateX(${this.data.length * this.el.clientWidth}px)
+          `
+        }
+        // 是否展示动画显示滑动动画
+        if (this.isShowTransition) {
+          this.trackEl.style.transform = `
+            translateX(${-1 * this.currentIndex * this.el.clientWidth + offsetX}px)
+          `
+        }
       }
       // 两指触摸放大缩小
       if (e.touches.length === 2 && this.twoFingerMoving) {
@@ -160,7 +198,9 @@
         }
       }
     },
-    // 滑动结束方法
+    /**
+     * 滑动结束方法（private）
+     */
     touchEnd: function (e) {
       if (this.data.length === 0) return
       // 单指滑动结束的操作
@@ -173,70 +213,84 @@
           this.slideLeft()
         } else if (offsetX > 0) {
           // 小于设定偏移量且滑动了便回弹
-          this.springback()
+          this.recoveryTrack()
         }
         if (offsetX < -1 * this.offsetSlider) {
           // 大于设定偏移量向左滑动
           this.slideRight()
         } else if (offsetX < 0) {
           // 小于设定偏移量且滑动了便回弹
-          this.springback()
+          this.recoveryTrack()
         }
       }
       if (this.twoFingerMoving) {
         this.twoFingerMoving = false
       }
     },
-    // 图片左滑
+    /**
+     * 图片左滑
+     */
     slideLeft: function () {
-      // 为第一张时结束不滑动
-      if (this.currentIndex === 0) return
-      // 展示圆点指示器设定active活跃类名
-      if (this.isShowIndicators) {
-        this.indicatorsEl.children[this.currentIndex].classList.remove('active')
-        this.indicatorsEl.children[this.currentIndex - 1].classList.add('active')
-      }
-      // 下标值减一
-      this.currentIndex--
-      this.trackEl.style.transform = `translateX(-${this.currentIndex * this.el.clientWidth}px)`
+      // 如果禁止循环且下标值为0不可左滑
+      if (!this.isLoop && this.currentIndex === 0) return
+      this.slide(this.currentIndex - 1)
     },
-    // 图片右滑
+    /**
+     * 图片右滑
+     */
     slideRight: function () {
-      // 为最后一张时结束不滑动
-      if (this.data.length - 1 === this.currentIndex) return
-      // 展示圆点指示器设定active活跃类名
-      if (this.isShowIndicators) {
-        this.indicatorsEl.children[this.currentIndex].classList.remove('active')
-        this.indicatorsEl.children[this.currentIndex + 1].classList.add('active')
-      }
-      // 下标值加一
-      this.currentIndex++
-      this.trackEl.style.transform = `translateX(-${this.currentIndex * this.el.clientWidth}px)`
+      // 如果禁止循环且下标值为最后一个不可右滑
+      if (!this.isLoop && this.currentIndex === this.data.length - 1) return
+      this.slide(this.currentIndex + 1)
     },
-    // 跳转到指定索引
-    jumpToIndex: function (index) {
+    /**
+     * 跳转到指定索引
+     * @param {*} index 跳转的索引值
+     * @param {*} isShowTransition 是否展示滑动动画
+     */
+    jumpToIndex: function (index, isShowTransition) {
       // 没有数据返回
       if (this.data.length === 0) return
       // 下标值错误处理
       if (index < 0) index = 0
       if (index > this.data.length - 1) index = this.data.length - 1
+      this.slide(index, isShowTransition)
+    },
+    /**
+     * 滑动窗口（private）
+     * @param {*} index 滑动到的索引值
+     * @param {*} isShowTransition 是否展示滑动动画
+     */
+    slide(index, isShowTransition) {
+      isShowTransition = isShowTransition === undefined ? this.isShowTransition : isShowTransition
+      // 滑动前下标值
+      var preIndex = this.currentIndex
+      // 滑动后下标值
+      var nextIndex = (index + this.data.length) % this.data.length
       // 如果显示指示器则跳转
       if (this.isShowIndicators) {
-        this.indicatorsEl.children[this.currentIndex].classList.remove('active')
-        this.indicatorsEl.children[index].classList.add('active')
+        this.indicatorsEl.children[preIndex].classList.remove('active')
+        this.indicatorsEl.children[nextIndex].classList.add('active')
       }
-      // 暂时停止动画并跳转到指定数据
-      this.trackEl.style.transitionDuration = '0ms'
-      this.trackEl.style.transform = `translateX(-${index * this.el.clientWidth}px)`
-      var _this = this
-      setTimeout(function () {
-        _this.trackEl.style.transitionDuration = _this.transitionDuration + 'ms'
-      }, 20)
-      // 设置当前索引
-      this.currentIndex = index
+      // 不展示动画
+      if (!isShowTransition) this.trackEl.style.transitionDuration = '0ms'
+      // 滑动滑块
+      this.trackEl.style.transform = `translateX(${-1 * index * this.el.clientWidth}px)`
+      // 不展示动画
+      if (!isShowTransition) {
+        var _this = this
+        setTimeout(function () {
+          _this.trackEl.style.transitionDuration = _this.transitionDuration + 'ms'
+        }, 20)
+      }
+      // 设置当前下标
+      this.currentIndex = nextIndex
     },
-    // 滑动距离不足失败回弹方法
-    springback: function () {
+    /**
+     * 恢复滑动窗口状态（private）
+     */
+    recoveryTrack: function () {
+      this.trackEl.children[this.currentIndex].style.transform = 'translateX(0)'
       this.trackEl.style.transform = `translateX(-${this.currentIndex * this.el.clientWidth}px)`
     },
   }
