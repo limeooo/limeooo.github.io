@@ -1,5 +1,4 @@
-@charset "utf-8";
-/* 格式化样式 */
+@charset "utf-8";/* 格式化样式 */
 *{margin:0;padding:0;}
 body{font:14px/1.5 Microsoft YaHei,Arial,Helvetica,sans-serif;}
 table{width:100%;border-collapse:collapse;border:none;border-spacing:0}
