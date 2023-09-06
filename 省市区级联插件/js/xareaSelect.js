@@ -36,6 +36,9 @@
     }
     return res
   }
+  function getViewPortWidth() {
+    return document.documentElement.clientWidth || document.body.clientWidth
+  }
   var Picker = function (config) {
     if (!config || typeof config !== 'object') {
       console.error('配置文件有误')
@@ -45,7 +48,6 @@
     this.evt = config.evt || 'click'
     this.data = config.data
     this.default = config.default || null
-    this._height = config.itemHeight || 44
     this.beforeInit = config.beforeInit || function () {}
     this.onInit = config.onInit || function () {}
     this.onChange = config.onChange || function () {}
@@ -315,6 +317,7 @@
       this._renderItem(config)
     },
     open: function () {
+      this._height = (getViewPortWidth() / 375) * 44
       this._renderPop()
     },
     remove: function () {
