@@ -1,9 +1,0 @@
-@charset "utf-8";/* 前端：肖玉航 */
-.x-sliderImage{position:relative;overflow:hidden;transform:translateZ(0);-webkit-user-select:none;-ms-user-select:none;user-select:none;}
-.x-sliderImage__track{display:flex;height:100%;list-style:none;}
-.x-sliderImage-item{height:100%;display:flex;justify-content:center;align-items:center;overflow:hidden;}
-.x-sliderImage-item img{width:100%;height:100%;border:none;transition:.2s all linear;}
-.x-sliderImage__indicators{list-style:none;position:absolute;bottom:12px;left:50%;transform:translateX(-50%);}
-.x-sliderImage__indicator{display:inline-block;width:20px;height:2px;background-color:#cad2de;margin-right:6px;}
-.x-sliderImage__indicator:last-child{margin-right:0;}
-.x-sliderImage__indicator.active{background-color:white;}

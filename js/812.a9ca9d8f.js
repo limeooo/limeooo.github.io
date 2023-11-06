@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunk_2023_5_15"]=self["webpackChunk_2023_5_15"]||[]).push([[812],{9812:function(n,u,e){e.r(u),e.d(u,{default:function(){return c}});var l=function(){var n=this,u=n._self._c;return u("div",[n._v("services")])},r=[],s=e(1001),t={},_=(0,s.Z)(t,l,r,!1,null,null,null),c=_.exports}}]);
-//# sourceMappingURL=812.a9ca9d8f.js.map
