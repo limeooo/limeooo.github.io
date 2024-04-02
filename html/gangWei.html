@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>岗位个性化学习路径</title>
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	
+	<body class="zbg">
+		<div class="linksBtn"><a href="https://ai-dev.chaoxing.com/graph/index.html#/course?graphType=2"  target="_self">返回图谱</a></div>
+		
+		<div class="zpathMap" id="studyPath">
+		</div>
+		<script src="js/d3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/studyPath.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/gangWei.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var studyPath = new studyPath('#studyPath')
+			studyPath.render(gangWei)
+		</script>
+	</body>
+</html>

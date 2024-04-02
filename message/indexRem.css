@@ -1,0 +1,61 @@
+.c_message_wrapper{
+  width: fit-content;
+  display:flex;
+  padding: 0.14rem 0.2rem;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius:0.8rem;
+  background: #4F5B62;
+  box-shadow: 0px 0.04rem 0.1rem 0px rgba(0, 0, 0, 0.10);
+  position: fixed;
+  left: 50%;
+  top: 1.8rem;
+  transform: translate(-50%,0); 
+   z-index: 99999;
+}
+.c_message_wrapper .c_base_icon{
+  display: block;
+  width: 0.16rem;
+  height: 0.16rem;
+  border-radius: 50%;
+}
+.c_message_wrapper .c_message_content{
+  color: #fff;
+  font-size: 0.14rem;
+  text-align: center;
+}
+.c_message_wrapper .c_close_btn{
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  cursor: pointer;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.c_message_fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 0.5s;
+}
+.c_message_loading {
+  animation: loadingFade 1.5s linear infinite;
+  animation-delay: var(--delay);
+}
+@keyframes loadingFade {
+  from {
+    fill-opacity: 1;
+  }
+
+  to {
+    fill-opacity: 0.3;
+  }
+}

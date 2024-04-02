@@ -1,0 +1,97 @@
+.c_message_wrapper {
+  width: fit-content;
+  display: flex;
+  padding: 14px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4F5B62;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+  position: fixed;
+  left: 50%;
+  top: 180px;
+  transform: translate(-50%, 0);
+  z-index: 99999;
+}
+
+.c_message_wrapper.c_warning_type .c_message_content {
+  color: #333;
+}
+
+.c_message_wrapper.c_warning_type.success {
+  border: 1px solid #C5F6D1;
+  background: #F8FEF9;
+}
+
+.c_message_wrapper.c_warning_type.error {
+  border: 1px solid #FBD4D4;
+  background: #FFF9F9;
+}
+
+.c_message_wrapper.c_warning_type.warning {
+  border: 1px solid #FFDCC5;
+  background: #FFFBF8;
+}
+
+.c_message_wrapper.c_warning_type.normal {
+  border: 1px solid #C6E8FF;
+  background: #F7FCFF;
+}
+
+.c_message_wrapper.c_warning_type.loading .c_message_content {
+  color: #fff;
+}
+
+
+.c_message_wrapper .c_base_icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.c_message_wrapper .c_message_content {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.c_message_wrapper .c_close_btn {
+  display: block;
+  transform: translateY(1px);
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.c_message_fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 0.5s;
+}
+
+.c_message_loading {
+  animation: loadingFade 1.5s linear infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes loadingFade {
+  from {
+    fill-opacity: 1;
+  }
+
+  to {
+    fill-opacity: 0.3;
+  }
+}

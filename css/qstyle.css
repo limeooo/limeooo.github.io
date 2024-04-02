@@ -1,0 +1,323 @@
+@charset "utf-8";
+
+.q_major_box {
+	width: 100%;
+	min-height: 12rem;
+	padding: .8rem 0;
+	margin: 0 auto;
+	background: linear-gradient(180deg, rgba(229, 242, 255, 0.00) 0%, #CCE5FF 100%);
+}
+
+.q_major_main {
+	width: 14.4rem;
+	margin: 0 auto;
+}
+
+.q_major_main>div {
+	margin-top: .4rem;
+}
+
+.q_major_main>div:first-child {
+	margin-top: 0;
+}
+
+.clearAfter:after {
+	content: '';
+	display: block;
+	clear: both;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	overflow: hidden;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.q_major_one {
+	width: 14.4rem;
+	height: 2.4rem;
+	background: url(../imgs/major/ico-major-one.png) no-repeat;
+	background-size: 14.4rem 2.4rem;
+	border-radius: .32rem;
+	box-shadow: 0 .2rem .5rem 0 rgba(0, 106, 255, .1);
+}
+
+.q_data_card {
+	padding: .4rem 0 0 0;
+}
+
+.q_data_card li {
+	width: 2.85rem;
+	height: 1.6rem;
+	margin: 0 0 .4rem .6rem;
+	border-radius: .24rem;
+	float: left;
+	display: table;
+	text-align: center;
+}
+
+.q_data_card li:nth-child(1) {
+	background: url(../imgs/major/ico-major-one-01.png) no-repeat;
+	background-size: 2.85rem 1.6rem;
+}
+
+.q_data_card li:nth-child(2) {
+	background: url(../imgs/major/ico-major-one-02.png) no-repeat;
+	background-size: 2.85rem 1.6rem;
+}
+
+.q_data_card li:nth-child(3) {
+	background: url(../imgs/major/ico-major-one-03.png) no-repeat;
+	background-size: 2.85rem 1.6rem;
+}
+
+.q_data_card li:nth-child(4) {
+	background: url(../imgs/major/ico-major-one-04.png) no-repeat;
+	background-size: 2.85rem 1.6rem;
+}
+
+.q_data_card li .q_data_dl {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.q_data_card li .q_data_dl dt {
+	line-height: .4rem;
+	font-size: .32rem;
+	color: #131B26;
+	font-weight: 700;
+	font-family: 'D-DIN';
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.q_data_card li .q_data_dl dd {
+	line-height: .26rem;
+	font-size: .16rem;
+	color: #8A8B99;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.q_major_title {
+	padding: .4rem .4rem 0;
+	height: .34rem;
+}
+
+.q_major_h2 {
+	line-height: .34rem;
+	font-size: .24rem;
+	color: #003366;
+	font-weight: 700;
+	letter-spacing: .04rem;
+}
+
+.q_major_h2:before {
+	content: '';
+	width: .1rem;
+	height: .22rem;
+	margin: -.03rem .1rem 0 0;
+	background: linear-gradient(180deg, rgba(0, 85, 255, 0.60) 0%, rgba(0, 128, 255, 0.10) 100%);
+	border-radius: .1rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.q_major_two {
+	width: 7rem;
+	height: 3rem;
+	background: url(../imgs/major/ico-major-two.png) no-repeat;
+	background-size: 7rem 3rem;
+	border-radius: .32rem;
+	box-shadow: 0 .2rem .5rem 0 rgba(0, 106, 255, .1);
+}
+
+.q_major_two_con {}
+
+.WordCloud_content {
+	width: 100%;
+	height: 2.26rem;
+	margin: 0 auto;
+}
+
+.WordCloud_content span {
+	line-height: 1;
+	font-size: .2rem;
+	padding: 1px;
+	color: #1365c2;
+	display: inline-block;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.WordCloud_content span.w10 {
+	font-size: .48rem;
+	color: #399CFF;
+}
+
+.WordCloud_content span.w9 {
+	font-size: .42rem;
+	color: #47D18C;
+}
+
+.WordCloud_content span.w8 {
+	font-size: .36rem;
+	color: #FFBF00;
+}
+
+.WordCloud_content span.w7 {
+	font-size: .3rem;
+	color: #A1DC37;
+}
+
+.WordCloud_content span.w6 {
+	font-size: .26rem;
+	color: #3FDAD4;
+}
+
+.WordCloud_content span.w5 {
+	font-size: .22rem;
+	color: #6DA0F3;
+}
+
+.WordCloud_content span.w4 {
+	font-size: .18rem;
+	color: #A48CE9;
+}
+
+.WordCloud_content span.w3 {
+	font-size: .16rem;
+	color: #57B9FB;
+}
+
+.WordCloud_content span.w2 {
+	font-size: .14rem;
+	color: #9AD6FF;
+}
+
+.WordCloud_content span.w1 {
+	font-size: .12rem;
+	color: #9AD6FF;
+}
+
+.WordCloud_cont {
+	width: 100%;
+	height: 2.26rem;
+	margin: 0 auto;
+}
+
+.WordCloud_cont>* {
+	display: inline;
+	white-space: nowrap;
+	font-size: .24rem !important;
+}
+
+.q_major_three {
+	width: 7rem;
+	height: 3rem;
+	background: url(../imgs/major/ico-major-three.png) no-repeat;
+	background-size: 7rem 3rem;
+	border-radius: .32rem;
+	box-shadow: 0 .2rem .5rem 0 rgba(0, 106, 255, .1);
+}
+
+.q_distr_tab {
+	width: 6.12rem;
+	height: .4rem;
+	padding: .04rem;
+	margin: .4rem auto 0;
+	background: #FFFFFF;
+	border-radius: .48rem;
+	box-shadow: 0px .04rem .4rem 0px rgba(0, 0, 0, 0.04);
+}
+
+.q_distr_tab li {
+	width: 25%;
+	line-height: .4rem;
+	font-size: .16rem;
+	color: #8A8B99;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+}
+
+.q_distr_tab li.active {
+	background: #F0F6FF;
+	font-size: .16rem;
+	color: #2E8AE5;
+	font-weight: 600;
+	border-radius: .4rem;
+	box-shadow: 0px 0px .3rem 0px rgba(0, 128, 255, 0.10) inset;
+}
+
+.q_distr_con {
+	margin: .4rem .6rem 0;
+}
+
+.q_distr_data {}
+
+.q_distr_dl {
+	width: 50%;
+}
+
+.q_distr_dl dt {
+	line-height: .36rem;
+	font-size: .32rem;
+	color: #131B26;
+	font-weight: 700;
+	font-family: 'D-DIN';
+}
+
+.q_distr_dl dd {
+	line-height: .24rem;
+	font-size: .14rem;
+	color: #8A8B99;
+}
+
+.q_distr_small {
+	margin-left: .04rem;
+	font-size: .14rem;
+	font-weight: 400;
+}
+
+.q_major_four {
+	width: 14.4rem;
+	height: 4.8rem;
+	background: url(../imgs/major/ico-major-four.png) no-repeat;
+	background-size: 14.4rem 4.8rem;
+	border-radius: .32rem;
+	box-shadow: 0 .2rem .5rem 0 rgba(0, 106, 255, .1);
+}
+
+.q_four_ech {
+	width: 100%;
+	height: 4rem;
+}
+
+.q_major_five {
+	width: 14.4rem;
+	height: 4.8rem;
+	background: url(../imgs/major/ico-major-five.png) no-repeat;
+	background-size: 14.4rem 4.8rem;
+	border-radius: .32rem;
+	box-shadow: 0 .2rem .5rem 0 rgba(0, 106, 255, .1);
+}
+
+.q_four_ech_pie {
+	width: 40%;
+	height: 4rem;
+}
+
+.q_four_ech_bar {
+	width: 60%;
+	height: 4rem;
+}

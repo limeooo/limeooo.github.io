@@ -1,1 +1,2008 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>42</title><script defer="defer" src="/js/chunk-vendors.e80e7e08.js"></script><script defer="defer" src="/js/app.68f4cdd7.js"></script><link href="/css/app.500185a7.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but test-app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>职业图谱课程群</title>
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/index1.css">
+  <script src="./js/ratio.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#">
+      <div class="cj_logo">
+        <img src="./imgs/fanya-logo.png" alt="">
+      </div>
+    </a>
+    <ul class="cj_tabbar_box">
+
+    </ul>
+    <div class="cj_header_user_box">
+      <div class="cj_user_avatar">
+        <img src="./imgs/avatar.png" alt="">
+      </div>
+      <p class="cj_user_name">洪莹莹</p>
+      <div class="c_user_options">
+        <ul>
+          <a href="javascript:void(0);">个人中心</a>
+          <a href="javascript:void(0);">切换单位</a>
+          <a href="javascript:void(0);">退出登录</a>
+        </ul>
+      </div>
+      <div class="cj_arrow_icon">
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4.43788 5.72731L0.259267 1.43751C0.177733 1.36168 0.112471 1.26866 0.0677846 1.16456C0.0230978 1.06047 0 0.947641 0 0.833538C0 0.719435 0.0230978 0.606632 0.0677846 0.502538C0.112471 0.398443 0.177733 0.305421 0.259267 0.229595C0.437282 0.0739185 0.663951 -0.00763114 0.895876 0.000562568C1.1278 0.00875628 1.34869 0.106134 1.51625 0.27402L5.07487 3.84441L8.42965 0.291773C8.59524 0.11985 8.81506 0.0169012 9.04798 0.00218884C9.28089 -0.0125235 9.51096 0.0620116 9.69513 0.211842C9.78228 0.281186 9.85434 0.369099 9.90654 0.469768C9.95874 0.570438 9.98989 0.681572 9.99792 0.795781C10.0059 0.90999 9.99068 1.02466 9.95312 1.13223C9.91557 1.2398 9.85658 1.3378 9.78006 1.41973L5.77131 5.71842C5.60358 5.88774 5.38265 5.98745 5.14977 5.99889C4.91689 6.01033 4.688 5.93273 4.50583 5.78059L4.44638 5.72731"
+            fill="#fff" />
+        </svg>
+      </div>
+    </div>
+  </header>
+  <div class="c_banner">
+    <p></p>
+    <div class="xbar_1"></div>
+    <div class="xbar_2"></div>
+    <div class="xbar_3"></div>
+    <div class="xcube_1"></div>
+    <div class="xcube_2"></div>
+    <div class="xcube_3"></div>
+    <div class="xcube_4"></div>
+    <div class="xcube_5"></div>
+  </div>
+  <div class="c_content_box_wrapper">
+    <div class="c_content_box">
+      <div style="display: flex; align-items: center; gap: 0.1rem;position: relative;
+      z-index: 666;">
+        <div class="c_search_box" style="margin-left: 0.4rem;">
+          <div class="c_placeholder">
+            <input type="text" placeholder="请输入关键字搜索">
+          </div>
+          <div class="c_search_btn">
+            <i>
+              <svg style="width: 0.18rem; height: 0.18rem;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M13.3655 15.058C11.97 16.1034 10.237 16.7227 8.35929 16.7227C3.74258 16.7227 0 12.9792 0 8.36133C0 3.7435 3.74258 0 8.35929 0C12.976 0 16.7186 3.7435 16.7186 8.36133C16.7186 10.2394 16.0995 11.9729 15.0544 13.3688L17.6518 15.9668C18.116 16.4311 18.1175 17.1825 17.6479 17.6522C17.1815 18.1186 16.4187 18.1119 15.9629 17.6561L13.3655 15.058ZM8.35929 14.3337C11.6569 14.3337 14.3302 11.6598 14.3302 8.36133C14.3302 5.06288 11.6569 2.38895 8.35929 2.38895C5.06164 2.38895 2.38837 5.06288 2.38837 8.36133C2.38837 11.6598 5.06164 14.3337 8.35929 14.3337Z"
+                  fill="white" />
+              </svg>
+            </i>
+            <span>搜索</span>
+          </div>
+        </div>
+      </div>
+      <div class="c_content_list_wrapper">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" style="padding-bottom: 1.32rem;">
+            <div class="swiper-slide">
+              <ul class="c_base_course_group_list">
+                <li class="c_base_course_group_item  c_add_group_item">
+                  <div class="c_decoration_card c_base c_first">
+                  </div>
+                  <div class="c_decoration_card c_base c_last">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_add_icon_box">
+                      <div class="c_add_icon"></div>
+                      <p>新建专业图谱</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群" onclick="window.open('./index2.html')">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img01.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园艺学</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img02.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物组织培养</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img03.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园艺学概论</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img04.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物及植物生理</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img05.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物生长与环境</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img06.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>花卉生产技术</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img07.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学英语</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img08.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学语文（三）</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul class="c_base_course_group_list">
+                <li class="c_base_course_group_item  c_add_group_item">
+                  <div class="c_decoration_card c_base c_first">
+                  </div>
+                  <div class="c_decoration_card c_base c_last">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_add_icon_box">
+                      <div class="c_add_icon"></div>
+                      <p>新建课程群</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img01.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园林规划设计</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img02.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物组织培养</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img03.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园艺学概论</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img04.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物及植物生理</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img05.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物生长与环境</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img06.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>花卉生产技术</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img07.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学英语</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img08.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学语文（三）</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul class="c_base_course_group_list">
+                <li class="c_base_course_group_item  c_add_group_item">
+                  <div class="c_decoration_card c_base c_first">
+                  </div>
+                  <div class="c_decoration_card c_base c_last">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_add_icon_box">
+                      <div class="c_add_icon"></div>
+                      <p>新建课程群</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img01.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园林规划设计</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img02.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物组织培养</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img03.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园艺学概论</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img04.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物及植物生理</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img05.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物生长与环境</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img06.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>花卉生产技术</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img07.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学英语</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img08.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学语文（三）</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul class="c_base_course_group_list">
+                <li class="c_base_course_group_item  c_add_group_item">
+                  <div class="c_decoration_card c_base c_first">
+                  </div>
+                  <div class="c_decoration_card c_base c_last">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_add_icon_box">
+                      <div class="c_add_icon"></div>
+                      <p>新建课程群</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img01.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园林规划设计</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img02.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物组织培养</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img03.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园艺学概论</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img04.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物及植物生理</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img05.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物生长与环境</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img06.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>花卉生产技术</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img07.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学英语</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img08.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学语文（三）</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul class="c_base_course_group_list">
+                <li class="c_base_course_group_item  c_add_group_item">
+                  <div class="c_decoration_card c_base c_first">
+                  </div>
+                  <div class="c_decoration_card c_base c_last">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_add_icon_box">
+                      <div class="c_add_icon"></div>
+                      <p>新建课程群</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img01.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园林规划设计</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img02.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物组织培养</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img03.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>园艺学概论</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img04.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物及植物生理</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img05.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>植物生长与环境</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img06.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>花卉生产技术</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img07.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学英语</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="c_base_course_group_item c_course_group_tag" data-content="课程群">
+                  <div class="c_decoration_card c_base c_first">
+                    <img src="./temp/img101.png" alt="">
+                  </div>
+                  <div class="c_card_course_img c_base c_second">
+                    <img src="./temp/img08.png" alt="">
+                  </div>
+                  <div class=" c_decoration_card c_base c_last">
+                    <img src="./temp/img102.png" alt="">
+                  </div>
+                  <div class="c_content_card">
+                    <div class="c_course_info_box">
+                      <div class="c_couser_name">
+                        <p>大学语文（三）</p>
+                        <div class="c_options_btns">
+                          <div class="c_options">
+                            <div class=" c_edit_btn"></div>
+                            <div class="c_delete_btn"></div>
+                          </div>
+                          <div class="c_more_btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c_course_info">
+                        <div class="c_knowledege">
+                          <p>1256个</p>
+                          <p>知识点</p>
+                        </div>
+                        <div class="c_course_num">
+                          <p>8门</p>
+                          <p>课程</p>
+                        </div>
+                        <div class="c_school_name">
+                          <p>XXX职业学院</p>
+                          <p>学校</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="c_footer">
+    <p>课程图谱 - 助力教学全流程</p>
+    <div class="c_footer_bg"></div>
+  </div>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script>
+    //队列任务
+    let cur = []
+    let classArr = ['c_second', 'c_first', 'c_last']
+    let classArr2 = ['c_second', 'c_first']
+    function queueTask(arr, classArr) {
+      arr.forEach(item => {
+        item.dom.classList.remove('c_second')
+        item.dom.classList.remove('c_first')
+        item.dom.classList.remove('c_last')
+      });
+      for (let index = arr.length - 1; index >= 0; index--) {
+        const element = arr[index];
+        element.dom.classList.add(classArr[index])
+      }
+      classArr.push(classArr.shift())
+    }
+    function reset(arr) {
+      arr.forEach((item, index) => {
+        item.dom.classList.remove('c_second')
+        item.dom.classList.remove('c_first')
+        item.dom.classList.remove('c_last')
+      });
+      if (arr.length == 1) {
+        arr[1].dom.classList.add('c_second')
+      } else if (arr.length == 2) {
+        arr[0].dom.classList.add('c_first')
+        arr[1].dom.classList.add('c_second')
+      } else {
+        arr[0].dom.classList.add('c_first')
+        arr[1].dom.classList.add('c_second')
+        arr[2].dom.classList.add('c_last')
+      }
+      classArr = ['c_second', 'c_first', 'c_last']
+    }
+    function debounce(func, delay) {
+      let timeoutId;
+      return function (...args) {
+        const context = this;
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          func.apply(context, args);
+        }, delay);
+      };
+    }
+    let timer = null
+    $('.c_base_course_group_item').on('mouseenter', debounce((e) => {
+      if (e.target.closest('.c_base_course_group_item')) {
+        const carouselList = [...e.target.closest('.c_base_course_group_item').querySelectorAll('.c_base')]
+        if (carouselList.length === 1) {
+          return
+        }
+        const carouselImgList = e.target.closest('.c_base_course_group_item').querySelectorAll('.c_base img')
+        if (!carouselImgList.length) {
+          return
+        }
+        const arr = carouselList.map((item, index) => {
+          return {
+            dom: item,
+            imgDom: carouselImgList[index],
+            img: carouselImgList[index].src
+          }
+        })
+        // 中转数组
+        let testArr = []
+        cur = arr
+        if (timer) {
+          clearInterval(timer)
+        }
+        if (carouselList.length == 2) {
+          testArr = classArr2
+        } else if (carouselList.length == 3) {
+          testArr = classArr
+        }
+        queueTask(arr, testArr)
+        timer = setInterval(() => {
+          queueTask(arr, testArr)
+        }, 1500)
+      }
+    }, 500))
+    $('.c_base_course_group_item').on('mouseleave', () => {
+      if (timer) {
+        clearInterval(timer)
+      }
+      reset(cur)
+    }) 
+  </script>
+  <script>
+    //图谱卡片轮播
+    const swiper = new Swiper(".mySwiper", {
+      effect: 'creative',
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          origin: "left center",
+          translate: ["-5%", 0, -200],
+          rotate: [0, 200, 0],
+        },
+        next: {
+          origin: "right center",
+          translate: ["5%", 0, -200],
+          rotate: [0, -200, 0],
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
