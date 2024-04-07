@@ -1,26 +1,22 @@
 var zhengShu = [
 	{
-		name: '园艺植物分类与识别',
+		name: '园林工程设计',
 		icon: 'start',
 	},
 	{
-		name: '植物生理学',
+		name: '园林工程施工',
 		icon: 1,
 	},
 	{
-		name: '土壤学与肥料应用',
+		name: '植物学',
 		icon: 1,
 	},
 	{
-		name: '园艺植物繁殖技术',
+		name: '土壤学与肥料学',
 		icon: 1,
 	},
 	{
-		name: '园艺植物病虫害防治',
-		icon: 1,
-	},
-	{
-		name: '园艺植物栽培技术',
+		name: '园艺植物繁殖与育种',
 		icon: 1,
 	},
 	{
@@ -28,55 +24,27 @@ var zhengShu = [
 		icon: 1,
 	},
 	{
-		name: '园艺植物营养与施肥',
+		name: '园艺产品采后处理与营销',
 		icon: 1,
 	},
 	{
-		name: '园艺产品采后处理',
-		icon: '1',
-	},
-	{
-		name: '园艺植物遗传育种',
-		icon: 'current',
+		name: '园艺经济与管理',
+		icon: 1,
 	},
 	{
 		name: '园林规划设计',
+		icon: 'current',
+	},
+	{
+		name: '植物生理生态学',
 		icon: 2,
 	},
 	{
-		name: '园艺植物生理生态',
+		name: '病虫害防治',
 		icon: 2,
 	},
 	{
-		name: '园艺植物组织培养',
-		icon: 2,
-	},
-	{
-		name: '园艺植物逆境生理',
-		icon: 2,
-	},
-	{
-		name: '园艺植物种质资源',
-		icon: 2,
-	},
-	{
-		name: '园艺植物生物技术',
-		icon: 2,
-	},
-	{
-		name: '园艺植物产品品质与安全',
-		icon: 2,
-	},
-	{
-		name: '园艺产业与市场分析',
-		icon: 2,
-	},
-	{
-		name: '园艺植物新品种保护',
-		icon: 2,
-	},
-	{
-		name: '园艺学实践技能',
+		name: '园艺学证书',
 		icon: 'end',
 	}
 ]
