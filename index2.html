@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>职业图谱课程</title>
+    <title>职业教育专业图谱</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/animation.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
@@ -264,7 +264,7 @@
         <li>
           <div class="c_option_wrapper" tab-index="0">
             <i class="c_btn_icon"></i>
-            <span class="c_ellipsis">课程群图谱</span>
+            <span class="c_ellipsis">专业图谱</span>
           </div>
         </li>
         <li>
@@ -488,6 +488,37 @@
               <div class="swiper-wrapper" style="padding-bottom: 0.3rem">
                 <div class="swiper-slide">
                   <ul class="c_base_course_group_list course column4">
+                    <li class="c_base_course_group_item" onclick="window.open('https://mooc1.chaoxing.com/course-ans/courseportal/242467142.html')">
+                      <div class="c_content_card sm">
+                        <span class="c_fanya_tag"></span>
+                        <img src="./temp/img11.jpg" alt="" />
+                      </div>
+                      <div class="c_base_card">
+                        <div class="c_course_name">
+                          <span>园林植物造景</span>
+                        </div>
+                        <div class="c_teacher_info">
+                          <div class="c_teacher_avatar">
+                            <img src="./temp/avatar05.jpg" alt="" />
+                          </div>
+                          <p class="c_teacher_name">王颖</p>
+                        </div>
+                        <div class="c_course_info_box">
+                          <div class="c_knowledege">
+                            <p>240</p>
+                            <p>知识点</p>
+                          </div>
+                          <div class="c_course_problem">
+                            <p>0</p>
+                            <p>问题</p>
+                          </div>
+                          <div class="c_sourse">
+                            <p>0</p>
+                            <p>资源</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
                     <li class="c_base_course_group_item" onclick="window.open('https://mooc1.chaoxing.com/course-ans/courseportal/242437203.html')">
                       <div class="c_content_card sm">
                         <span class="c_fanya_tag"></span>
@@ -1524,19 +1555,24 @@
       renderCount();
       
       // 搜索操作
+      const searchArray = [
+        ['具备独立进行园林规划设计的能力', '掌握植物组织培养的基本原理、技术和方法', '具备独立进行植物组织培养实验和科研工作的能力'],
+        ['园艺师', '园艺植物种子繁育技术员', '园艺植物苗木繁育技术员'],
+        ['园艺学实践技能大赛', '全国技能大赛园艺项目', '“封怀园艺”大学生景观创作竞赛'],
+        ['园艺学证书', '景观设计师证书', '花卉园艺师证书'],
+      ]
       function searchHandle(el, index) {
         const key = $('input', $(el).prev()).val();
-        if (index === 0) {
-          $('.c_change_wrapper').eq(0).find('iframe').attr('src', './html/keChengQun.html');
-        } else if (index === 1) {
-          $('.c_change_wrapper').eq(1).find('iframe').attr('src', './html/gangWei.html');
-        } else if (index === 2) {
-          $('.c_change_wrapper').eq(2).find('iframe').attr('src', './html/daSai.html');
-        } else if (index === 3) {
-          $('.c_change_wrapper').eq(3).find('iframe').attr('src', './html/zhengShu.html');
+        if (index === 0 || index === 1 || index === 2 || index === 3) {
+          const arr = searchArray[index];
+          const findIndex = arr.findIndex(item => item.includes(key));
+          if (!key || findIndex === -1) return;
+
+          $('.c_change_wrapper').eq(index).find('iframe').attr('src', `./html/index${index + 1}_${findIndex + 1}.html`);
         } else if (index === 4) {
           $('.c_base_course_group_list.course').children().each(function() {
             const name = $(this).find('.c_course_name span').text();
+
             if (name.includes(key)) {
               $(this).show();
             } else {

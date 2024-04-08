@@ -90,7 +90,7 @@ header{position:absolute;display:flex;justify-content:space-between;top:0;left:0
 .c_search_box{width:5rem;padding:0.04rem;padding-left:0.24rem;height:0.64rem;box-sizing:border-box;border-radius:0.64rem;display:flex;background-color:#fff;position:relative;cursor:pointer;box-shadow:0px 4px 16px 0px #B1B4D166;}
 .c_search_box input{outline:none;border:none;background-color:transparent;width:100%;height:100%;}
 .c_search_box input::placeholder{color:#b3b3b3;font-size:0.18rem;font-style:normal;font-weight:400;line-height:normal;}
-.c_placeholder{flex:1;color:#b3b3b3;font-size:0.18rem;font-style:normal;font-weight:400;line-height:0.26rem;}
+.c_placeholder{flex:1;color:#b3b3b3;font-size:0.18rem;font-style:normal;font-weight:400;line-height:0.56rem;}
 .c_search_btn{color:#fff;cursor:pointer;flex-shrink:0;padding:0 0.2rem;line-height:0.56rem;border-radius:1rem;font-size:0.18rem;text-align:center;background:linear-gradient(73.43deg,#001AFF 0%,#15B9FF 100%);}
 .c_search_btn svg{transform:translateY(0.02rem);transition:all 0.3s;}
 .c_search_btn span{margin-left:0.1rem;}

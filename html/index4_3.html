@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>证书图谱学习路径</title>
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	
+	<body class="zbg">
+		<div class="zpathMap" id="studyPath">
+			<div class="zloading">学习路径加载中。。。</div>
+		</div>
+		<div class="linksBtn"><a href="https://ai-dev.chaoxing.com/graph/index.html#/course?graphType=3" target="_self">返回图谱</a></div>
+		
+		<script src="js/d3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/studyPath.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/data.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var studyPath = new studyPath('#studyPath')
+			studyPath.render(zhengShu3)
+		</script>
+	</body>
+</html>
