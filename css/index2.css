@@ -180,6 +180,7 @@ header{position:absolute;display:flex;justify-content:space-between;top:0;left:0
 .xframe_box{padding:0.13rem 0.65rem 0.13rem;}
 .xframe_box iframe{border-radius:0.6rem;}
 
+.xaiRobot{z-index:999;display:block;position:fixed;right:0rem;bottom:.2rem;width:2rem;height:2rem;background:url(../imgs/icon-aiRobot.png) no-repeat center/ 100% 100%;}
 
 
 
