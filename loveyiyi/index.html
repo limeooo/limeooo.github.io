@@ -113,10 +113,11 @@ overflow:hidden
  
 		100%{-webkit-transform:rotate(360deg);}
 }
+
 </style>
 </head>
 <body>
-<audio id="player" src="img/love.mp3" loop="loop" hidden="true" autoplay></audio>  
+<audio id="player" src="img/love.mp3" loop="loop" hidden="true" autoplay="autoplay"></audio>  
 <canvas id="c" style="position: absolute;z-index: -1;text-align: center;height:100vh;top:0;left:0;width:100%"></canvas> 
 <!-- <img onclick="playMusic(this)" class="music musicRotate" src="img/musicP.png"> -->
 <!-- <div onclick=star() style="position: absolute;top: 200px;width: 100%;cursor: pointer;text-align:center;font-size:20px;font-weight:bold;z-index:9990"><h1 class="svoiceIcon">你知道吗，等待是最长情的告白♥</h1></div> -->
@@ -494,7 +495,14 @@ overflow:hidden
 <script type="application/javascript" src="main.js"></script>
 </body></html>
 <script>
+  document.body.addEventListener('touchstart',function(e){
+    $("#player")[0].play()
+  })
+  document.addEventListener('WeixinJSBridgeReady',function(e){
+    $("#player")[0].play()
+  })
 document.body.addEventListener('touchmove', function(e){
+  
         e.preventDefault();
     }, { passive: false });  //passive 参数不能省略，用来兼容ios和android
 	function star(){
