@@ -1,0 +1,14 @@
+**/*.svg
+**/*.sh
+**/*.css
+**/*.md
+
+/node_modules/**
+/public/*
+/dist/*
+.vscode/*
+static/*
+src/components/knowledge/assets/*
+
+.local
+.output.js

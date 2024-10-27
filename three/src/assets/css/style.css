@@ -1,0 +1,22 @@
+.xmyThree{position:fixed;top:0;left:0;width:100vw;height:100vh;}
+.xmyThree canvas{width:100%;height:100%;}
+.xmyThree_tip{z-index:1;position:absolute;top:50px;right:50px;padding-top:50px;color:#FFF;font-size:20px;font-weight:bold;background:url(../images/icon-wheel.png) no-repeat center 0/ 40px;-webkit-animation:toggleTip 1.5s infinite alternate;-moz-animation:toggleTip 1.5s infinite alternate;-o-animation:toggleTip 1.5s infinite alternate;animation:toggleTip 1.5s infinite alternate;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.xmyThree_music{z-index:1;position:absolute;top:50px;left:50px;width:50px;height:50px;background:url(../images/icon-music.png) no-repeat center/ 100% 100%;cursor:pointer;-webkit-animation:toggleTip 1.5s infinite alternate;-moz-animation:toggleTip 1.5s infinite alternate;-o-animation:toggleTip 1.5s infinite alternate;animation:toggleTip 1.5s infinite alternate;}
+.xmyThree_music.stop::before{content:'';position:absolute;top:50%;left:50%;display:block;width:150%;height:5px;background:#FFF;-webkit-transform-origin:center;-moz-transform-origin:center;-ms-transform-origin:center;-o-transform-origin:center;transform-origin:center;-webkit-transform:translate(-50%,-50%) rotate(45deg);-moz-transform:translate(-50%,-50%) rotate(45deg);-ms-transform:translate(-50%,-50%) rotate(45deg);-o-transform:translate(-50%,-50%) rotate(45deg);transform:translate(-50%,-50%) rotate(45deg);}
+.xmyThree_loading{z-index:9;position:absolute;top:0;left:0;width:100%;height:100%;background-color:#000;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.xmyThree_loading .xstar{position:absolute;top:0;left:0;background:transparent;height:2px;width:2px;-webkit-box-shadow:rgb(74,74,74) 499px 520px,rgb(71,71,71) 1738px 416px,rgb(161,161,161) 1658px 406px,rgb(74,74,74) 1198px 652px,rgb(191,191,191) 1865px 444px,rgb(64,64,64) 1093px 903px,rgb(166,166,166) 1120px 66px,rgb(230,230,230) 1501px 56px,rgb(158,158,158) 588px 33px,rgb(122,122,122) 117px 333px,rgb(105,105,105) 171px 415px,rgb(107,107,107) 519px 470px,rgb(242,242,242) 1169px 493px,rgb(179,179,179) 871px 300px,rgb(66,66,66) 1072px 511px,rgb(107,107,107) 238px 133px,rgb(54,54,54) 416px 622px,rgb(120,120,120) 623px 495px,rgb(133,133,133) 1126px 868px,rgb(171,171,171) 565px 147px,rgb(99,99,99) 1939px 327px,rgb(112,112,112) 1772px 690px,rgb(179,179,179) 90px 963px,rgb(176,176,176) 1787px 102px;box-shadow:rgb(74,74,74) 499px 520px,rgb(71,71,71) 1738px 416px,rgb(161,161,161) 1658px 406px,rgb(74,74,74) 1198px 652px,rgb(191,191,191) 1865px 444px,rgb(64,64,64) 1093px 903px,rgb(166,166,166) 1120px 66px,rgb(230,230,230) 1501px 56px,rgb(158,158,158) 588px 33px,rgb(122,122,122) 117px 333px,rgb(105,105,105) 171px 415px,rgb(107,107,107) 519px 470px,rgb(242,242,242) 1169px 493px,rgb(179,179,179) 871px 300px,rgb(66,66,66) 1072px 511px,rgb(107,107,107) 238px 133px,rgb(54,54,54) 416px 622px,rgb(120,120,120) 623px 495px,rgb(133,133,133) 1126px 868px,rgb(171,171,171) 565px 147px,rgb(99,99,99) 1939px 327px,rgb(112,112,112) 1772px 690px,rgb(179,179,179) 90px 963px,rgb(176,176,176) 1787px 102px;}
+.xmyThree_loading .xtext{padding-bottom:20px;color:#FFF;font-size:22px;font-weight:200;letter-spacing:5px;text-transform:uppercase;-webkit-animation:toggleTip 1.5s infinite alternate;-moz-animation:toggleTip 1.5s infinite alternate;-o-animation:toggleTip 1.5s infinite alternate;animation:toggleTip 1.5s infinite alternate;}
+.xmyThree_loading .xbar{display:block;width:200px;height:4px;border-radius:4px;background:hsla(0,0%,100%,.5);}
+.xmyThree_loading .xwid{display:block;width:0;height:100%;border-radius:4px;background:#FFF;-webkit-transition:0.5s all linear;-o-transition:0.5s all linear;-moz-transition:0.5s all linear;transition:0.5s all linear;}
+
+@keyframes toggleTip {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
