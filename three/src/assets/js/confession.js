@@ -112,7 +112,7 @@ export default class Confession {
     this.pathPositions = []
 
     // 场景切换数据
-    this.sceneIndex = 4
+    this.sceneIndex = 0
     this.sceneCallback = [
       () => {
         this.translateCamera(new THREE.Vector3(-7.75, 3.09, 6.17), new THREE.Vector3(-8, 2, 0))
