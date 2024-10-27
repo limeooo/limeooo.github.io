@@ -248,7 +248,7 @@ export default class Confession {
       outputEncoding: THREE.sRGBEncoding, // 输出编码
       physicallyCorrectLights: true // 物理正确灯光
     }) // 创建渲染器
-    this.renderer.setPixelRatio(this.el.devicePixelRatio) // 设置像素比
+    this.renderer.setPixelRatio(window.devicePixelRatio) // 设置像素比
     this.renderer.setSize(this.el.clientWidth, this.el.clientHeight) // 设置渲染器尺寸
     this.renderer.shadowMap.enabled = true // 开启阴影
     this.el.appendChild(this.renderer.domElement) // 将渲染器添加到el中
@@ -465,7 +465,7 @@ export default class Confession {
     this.backgroundMusic = new THREE.Audio(this.listener)
 
     const audioLoader = new THREE.AudioLoader()
-    audioLoader.load('/audio/background.mp3', (buffer) => {
+    audioLoader.load('./audio/background.mp3', (buffer) => {
       this.backgroundMusic.setBuffer(buffer)
       this.backgroundMusic.setLoop(true)
       this.backgroundMusic.setVolume(0.7)
